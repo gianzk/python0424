@@ -42,7 +42,7 @@ def obtener_opcion(maxOpcion):
         return False
     
 
-def calc_impuesto():
+def calc_impuesto(inventario):
     pass
 
 def getFlete(ix):
