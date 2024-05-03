@@ -36,7 +36,10 @@ def generateReport():
 def showData():
       with sqlite3.connect('./proyecto/database.db') as conn:
            query='select * from amazon'
-           df=pd.read_sql(query,conn)
+           df = pd.read_sql(query, conn)
            fig, ax = plt.subplots(figsize=(10, 6))
-           ax.scatter(df['category'], df['actual_price'], alpha=0.7, cmap='viridis')
-           fig.show()
+           ax.scatter(df['category'], df['actual_price'], alpha=0.7)
+           plt.xlabel('Categoría')
+           plt.ylabel('Precio Actual')
+           plt.title('Gráfico de Dispersión')
+           plt.show()
