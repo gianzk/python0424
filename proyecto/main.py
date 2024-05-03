@@ -24,8 +24,11 @@ def getFunction(opcion):
     if opcion ==2:
         #póner log
         generateReport()
+    if opcion ==3 :
+        showData()
 
 if __name__=='__main__':
-    opcion=showOpcionts()
-    getFunction(opcion)
+    while True:
+        opcion=showOpcionts()
+        getFunction(opcion)
 
